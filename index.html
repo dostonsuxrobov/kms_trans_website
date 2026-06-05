@@ -1,10 +1,20 @@
 <!DOCTYPE html>
+<!-- KMS Trans Inc — single-file shareable build. For GitHub Pages use the multi-file version. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KMS Trans Inc — Trucking, Warehousing & Cross-Docking</title>
+<title>KMS Trans Inc — Trucking, Warehousing &amp; Cross-Docking</title>
 <meta name="description" content="KMS Trans Inc — full-service trucking, warehousing, and cross-docking based in Penndel, PA, serving the Northeast and Mid-Atlantic. Get a freight quote today." />
+
+<!--
+  =====================================================================
+   KMS TRANS INC — EDIT YOUR DETAILS HERE
+   Search this file for the word  EDIT:  to find everything you can change.
+   Contact info also lives in /assets/js/chatbot-knowledge.js (top of file).
+   Form delivery is set up in  /assets/js/forms.js  (Web3Forms access key).
+  =====================================================================
+-->
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -188,6 +198,7 @@ a{color:inherit;text-decoration:none}
 .field input,.field select,.field textarea{font-family:var(--font-body);font-size:1rem;color:var(--text);background:var(--surface-2);border:1.5px solid var(--line);border-radius:10px;padding:.8rem .9rem;transition:border-color .18s ease,box-shadow .18s ease;width:100%}
 .field textarea{resize:vertical}
 .field input::placeholder,.field textarea::placeholder{color:var(--muted-2)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--hi);background:#fff;box-shadow:0 0 0 3px rgba(238,122,35,.16)}
 .field input.invalid,.field select.invalid,.field textarea.invalid{border-color:var(--err)}
 select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235c6b86' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
@@ -294,16 +305,19 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
   *{animation:none!important;scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
 }
+
 </style>
 </head>
 <body>
 
+<!-- Hazard accent bar -->
 <div class="hazard-bar" aria-hidden="true"></div>
 
+<!-- ============ HEADER / NAV ============ -->
 <header class="site-header" id="top">
   <div class="wrap header-inner">
     <a href="#top" class="brand" aria-label="KMS Trans Inc home">
-      <img class="brand-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmAAAADSCAYAAADt9nyHAAASCElEQVR4nO3d7ZHcNtYGUOqtDcExOABH4QyciwNQLs7AUSgAx6Ac/P5Q0aKonpluEh/34p5TtbVb3vE0AILAMwAb3DYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4CW//Pbnv7PLAPzMvQkAMMkvv/35rzDGKvRnMvs0uwAQRfaB/OuXzz/dz4/q9OjnMvjltz//zVp2gLMmg9l7E5cBk8iyh66r3JfMNjNQ7/e9+4CZbne+qhMYY/UaKM/995/f/+rxMdP9+vcfP/2zLJOPlS9e6QOz5qRXy6dPI4CRQuvB6thvVw1djxyD2MgJ4O440fP6t/Be+XqNkZmu3yOtyh91DhKw+Mj/zS4AfMRA1k7WsNlykh05Yff8rFH16PU5d39v9Afwo5eP+QQwyqm6+rVtj7cie4sUnkav5Pjjob1swSZbeRlHACO06FtPWY0MBi0/69XfdbzekbfRrtrrFHWVqnUZIpTnqsxlp4//zS4AzGL1a31fv3z+tMIzWB+JVJbWel7D0TyAz5EVMMLqOUhVC19VVQhfK69+wcoEMMqoPKHM+vbjTBXCVwUr3rcr1onXCWCEZPWrHeGrnb39ok2grcsTrX4r0sYIYIRTJSTQx4iVL310DCGFlQlgLO/4NXCrX2urvO0orEAuvgVJKBkmOmJa8ZiJV7V4bVO1IPdWe+1tWa09GEcAI4wek51DV/OFiFf0nCRXbrcMRr4u6r2fP/57whgt2YKkhGrhqwrhq61VA8aj63mlrl+/fP5UtW/QnhUwlrXqZPKMKoeuCl8867w9e+c66yO0YAWMEHq+cqjy6teqE0Wv9+ut0F5X22X1P1hsJRKNAMZ03vfY1uqrX5W/6fis6vfA2bk9VrrW5GULkqVVW/1a/dgJ4auPCoHtUQhr8a1RuEoAYyon3vex4qQifNXS+wiI/Xe3+gz9iFcJYCylwl/yb6lw7ERL77XTCisjz9ah8j3T0lvtmL0f0Y9nwJjG6ld7BvvnfNROK7WjgDWX9uctAhjLqDzQrf7gPdd8tAoW/Z5ZJQj3+tYuudmCZArHTjDDKhM6Oe3jlH7ItlkBYwKDT1tWv55Ttd9lX3lZ8bplvya0IYCRXuXVr9WPnWjJpPdjG2gPmEsAYyhbj30IX8/JGDpaXNvZL7bO9nkjZOyLtCWAQVK2Hq/JNvG1LO8eZO7+zhltuOKLsLP1RdoSwBjGsRPtCF/3ZJv4Wq6C3a37zBC0f6tztSBGTQIYqXiG5Ucmo+ve6j/RjgzYr2+ErciWZbnz+fv/1v/JzDEUDNFqkHz0e6x+0ZIJPZ/jNYsUnuE9Ahjd9ZjQDLK0kO1cpt7vR/zos2d87quOz7mdy/zWPxtZPtgJYKRT+ZuPlVe/eoaPFd79OEKmdnpUzmf/2Xta98FMbUpbngGjK8dO9FNx0O5Z5ywrITOve8U+d+a5M1oRwOjGINWWQ1e/qRbCIpTJth20ZwuSNCqvfglfP6q0HRmpLLsRz6K1+v132u+9ZwRnPo/HGqyA0UXESWMF2vW7ym0xsu7Zg8adY0Xe227M3CbEIICRTuXVL37UK4hkmFxHhLDZ53611PKaZugfxCeA0VyPB+8NeGtMgj1UDmG85tWx5PzzPcYi93VdngEjFatfPNJrmyzbOWE859W+IozTgxUwmnLsRB8CwMcqtlHPOs9uz9mfD70JYBCU1a/X9dyOtApCa0JmbQIYzVj9akf4uq7apNajvlHaMEo5oAcBjCZ6DpTVwteZSeh1HswnOvc1AhhdmKiuc+hqG0LYNdH6XLTytJD9bDXaEMC4rcULbo88b/PNihPPaFVC2Op9ZcX6rVgnXiOAEcp5Yqu2/ejZr/aqPJjfop6RQ0Hksr1ilXpw3+1zwB4tpe4dLNLgxDWPBotR78qrFr7ox5bPGjLPLYIXZ00OYn2rY+lwa6qyrTOaZ79yivTy7jtBM0odnpEpUGdqV8ayBUkI1bceVxZlonzvxcpupRanjXZnqsV/PqAEnctmIwauIIICVV7+irVZEK08kWfveudwzrm/WtmMeHYYQHLr6zcqDeLStsX3r8G65nnlf5Fuf0fN6f1SvY92vluNO0Llb96tbv8+W+dw3Vr43mUOHIoR9oKsWvratTgC7686Eu3K7rl4/WJWblhCqBjDhC6AmD+FDAMIXQC0ewmcqz34BUJEVMKYRvr6x+gVQjwDGFI4BAKAyAYzhqh+6avULAAGMqaqFLwDYNgGMwapvPVr9AmDbfAuSiaqtfglfAH09+iM/6nh7O4A5hZlnVV/9AmoyT17XYt648jtGXC8doriRA4NjJ76pMhBXCdxvXc8s9Y/cH3u14cg6t6rDiDLfLWuLMka9b3q0f5MVsBYFYZ7zNex9o1cLXxVVGhce/RGTqf6j7/9nZWrDt2Sqw+yyzv78j/R4MbuH8PlJ6xvhl9/+/Df6zdVTxdUv8trv15Xv2VF1a3m/r3pNMtarVXkFMH7SMyRUXf0SvNa18rWdNTGO+Nxsk/6KMl+DFsFRAOMHK08mM1j9IrvMk+SKVrke6iGAMVC11S8v22YVI7eJVpmYe2rZRjPae7VrfPX+EMD4T48VmtVutCusfLGaVe7rzPXI8u3KvZyZ27oXAYwhrH5Bfvsk2mvSNkm/JkN77X1l/+8MZb7q1boJYGzb1nf1q1r4gpWtNoFmr0/28lcmgNFF5UHBg/dU0OO4mpa/745IZXlGlvJmKecoAhjNQ4IT72F9K/1xEfUw2lcIN/l4GXdxGQeaDLQrK2v9CjPhoY1q75y8W9fZ/c4KGE1Z/RK+gHlmh4pRWoyzX798/jRzvLYCVpigQC9fv3z+VGUi6GnllxtHs9Lq0Up1eWQfX1qsgM0MYQJYUb3P/Kq6+sV3PZ8tvGrlSektxzpHDGMRy0R8rVbAWpTlKluQNFctfAFrWCkMrlSXs4wv8H5EACvIifdtWf0ii9l/8Z9lOc09q1WCylv2+mWtpy3Iolo+I1B56/HMREBUqz8XBK1DWO/7xQpYMRGfy8nM6hdZRAtfrZ7pO7/q5q4Vx7QodYrWBz/Se4VNACuqx41QbfXrHL6yDS7UE2Uijm7FdlqxTqO1DmMCWCECQh+zz5KBZ0SagHt9o9V9+L5IfSC7FkFMAOOyys9+2XpkhPMWyDMD/vFnMj+gfJUQ9r7ZfWG163OnPT2Ez23VwtfRaoMJbfQ8iPbVENbDnX4/OwA8a+UvLaxctxmutqcVsAJskbVl9QvmGjWeRQmLqx0dtOJ8dKU9BTAAlrLiBL9iCFvtOr3angJYAVH+iltF5S1XuMNYdF2vbUPXZB4BjNtsyUEds1ctRn/+7IByru9qIWzFlbBnCWBF9LjBqt40R7MHZxgp08P3q4xPe7sd67NK3Y72IJa9bq/0cwGMJqqtgh23IYUwGGe/30bedxHv8exB5T3HMLZyPR1DUcijv6QAnhFp9WtGCJvFeP16G2TpFwJYMXtHbvVA5/G8o1///qPUA+r//P7Xfyt/wi1HWSaAZ+nXMc/O6nneXGZZApstyGKOQaFVp4s2KI1UKXBST4stIAGhr9W36UaY1X4CWEE9B8Rqz4KdmWxYxXG1XL/+JnI7ZAth0dpyRvvZgiysV4ervBUJK9hXyK2u0NI5dF0NYa375KztZStgRbX+68MgDet4a0J6ddyItsrRQuQ6RQ7MLdttlfnLChjNeCDfKhhtvTIxjAgGUSd36nn0xac7K1kzgrUVsMIcztrWHjgj/4UMz7rbj90H80Qch3uV6fiM4pXPmPmMoxUwmttXwqqtgh1F/Mo6a3MkwTgZ7u9q/SFjXa2AFde701bblqsaOImhx8PJr/zzZ/9/nnenLaOHxOoEMAyWnWhXZhgRwkzsee7vSNcqUll6eaWOAhhdHDth5VWwLIM0tKLPx1Mh+GTkGTC2bcvxTENW2paR9v7W+mv/o/twz89r1TaZ7u0oz4RFKUcPr/YFK2D8p+fZKpVXwbbNqgDj9Py2WYufeUaWUJNNlHaNUo6WrtRJAKOryAcD9iaEMVPV++4ZPcalLPd3lH4RpRwtXK2LAMYPvCcS8jrfvyNDRtXVrztnUM0SpaxRyjGLAEZ3Wf4y7MGxFIyUfUI7vgB8dlleka282xanr2TeJblbdgGM7io/CwZXRZ2UVnrlUdQ2fmT1N5dEKstHWoXG2wEsU6MxT+V+4lgKroi8pXcum37dvw16jaGRxuY92EQq065H2ZodQxGxwfjYjK9RV35FEcyQ4av/5pDx9vF/Vv94b/45v2R7XKkel6EHHZ5hzjdRtRB23H412VyT6bUsdyeNEStXVz0qW6Zr88iV8h+Dy3t1yNQ2V8s68xpmLPO2CWAMdrxRqgWwbfsewmbf+JlkOuwSGGOFccFD+EzjgXyekX2QhSpGbhWuMC6krwD52Iq0FQlQnRUwhov6LReAUaJ/KYL+BDCm2UNYta3Iait+wM/8EYoABhPsIcxfwQA1CWCEUG0V7EgIA6hHAGOqysvwb52QL5ABrE8AI4zKq2Db9j14VQ6lAFUY6Amh8gGtjqUgqmcOu3xvxfb87z76WX2eqnR8wtgH52oBbNuEMOI5h6+eW+P6PBXp9IRhFeybFSejFpP3M+3S812HrUV8V+QuwnOIK94HcOQZMMKoPOBWC5zE9Mtvf/4bIXxtW6yyQA8CGCFVfyCfuapN/JHDTuSywR3/a/FL3Bw1VV6x6uGf3//afv37D9+GDOKZB9CzyzR2V7ge1HJ7BSzTDUxbPf4yPb4n0ioYsx37+GpjXcb6WA1jJbYgCa1aCHvrcFbmW2X1ZYUQk738sG0CGA0YDNvyQH48+ng8rgnZCWA00WMrcv/f1VbBiGmFCX+FOhytVh9qEcAIa5Utnyv2VTATTCyZr0fmsr9n1XqxPgGMZnoOhFbBiCLjhJ+xzK+qUEfWIoARWuWtSKtgcbkmsTiigowEMJoyMfWhXePJck2ylBOqEcBozlZkO+djKUymsbgeP9rP8Tv+Z3aZIKomJ+FDT1+/fP5UeaLbT8gnpsjbX73um1fqe/7ZXmWKfB3gEStgdGEVjEoq/YFwN+RYGYNvBDBSOA/Y1UKYE/Lje+W6ZL2GLYOTIEZ1Ahjd9DycFSJ6ts+P6MsR7r+PymDbkMoEMNKyCkZErs13H4Ur4YvKBDC6Mhm15T2ROazU70dsFQpiVORbkHTXcpvh/I3IX//+o2wosX3DSvRlqrECBsnYiszBtQHeI4AxRMvJ6LwlUu1ZsDMHtMb11nVxvQABjLQqh7Cq264ZZQ5btgWhHwGMYTJPRBEJYX30CB36PnAmgJFa5VWwM5N8O9lDmL4A8QlgDGViaMsqWD+ZQ5itQ4hPAGO4nid0WwUTcFvKHMJayFRWyEYAYwmV/+K3CtZX5b4F9OMgVqboeYhoxcNZ//n9r/9W/xzQ2t75AGD62Nv4lfbef1afJxsrYCyp+lYk7VWd4EcEz/NZdq985v6zAjLZCGBM0/NZsIqckN9f9T4GtCOAMVXPoFB9FUwI66NiCOvZl/RTqhLAWErFyfGo2rNvIzwKCBn6Wesy9ghKwheVCWAsx7EUtPRWkMkQwlprGZiEL6oTwJiux0BccXLceRZsnIr97M7L3/d/V7+Ebbs9eLiRaKXnlknFrbnj6t/soNBinHimDqM+p8fnvurZclYZo2f3cXiVFTAooMokPIvJH3iVAEYYXlHU1nnVTwjrSwibR9uTkQBGKI6lgLaEE4hJAGNp1Sefis++zRS1v0UtVwsr1421CWCE02Mrch+kK66CCWFjRQ0EUcsFVQlgUIjnwMYQdsbQzmQmgBFSz7PBrIKNVTX09Q4HV9p1pcCyUl2oSQCjpIohbDf6IMzKE2XPul/93cct+ayylx+2TQAjsKorJ73MWgWrfh17hYW77Zo1xGQtN5wJYJTibLDxrykyYfZpgxa/M8u12VftspQXniGAEVr11RPWETU8RA82kcsGdwhghOeE/NyE6O8ih4lIq0yRygK9CGCUVDmEjX4WzCT6owztcQw/o8ordFHN7Y7ur1tGiPogc3YjJ7s7bf1KOUd9TgtXyxolpFQ/CgPucCNQmgBmMgSYweALiT0bIAUtAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2P4fGNj9b3j2690AAAAASUVORK5CYII=" alt="KMS Trans Inc" />
+      <img class="brand-logo" src="data:image/png;base64,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" alt="KMS Trans Inc" />
     </a>
 
     <nav class="main-nav" id="mainNav" aria-label="Main navigation">
@@ -314,7 +328,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
       <a href="#quote" class="nav-cta">Get a Quote</a>
     </nav>
 
-    <a class="header-phone" href="tel:+12678080333">
+    <a class="header-phone" href="tel:+12678080333"><!-- EDIT: phone -->
       <span class="header-phone-label">Office</span>
       <span class="header-phone-num">(267)808-0333</span>
     </a>
@@ -325,6 +339,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
   </div>
 </header>
 
+<!-- ============ HERO ============ -->
 <section class="hero" id="hero">
   <div class="hero-grid-bg" aria-hidden="true"></div>
   <div class="wrap hero-inner">
@@ -340,14 +355,14 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
       </p>
       <div class="hero-actions">
         <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
-        <a href="tel:+12678080333" class="btn btn-ghost">
+        <a href="tel:+12678080333" class="btn btn-ghost"><!-- EDIT: phone -->
           Call Dispatch
         </a>
       </div>
     </div>
 
     <ul class="hero-stats reveal" aria-label="Company highlights">
-      <li><span class="stat-num" data-count="24">24/7</span><span class="stat-label">Dispatch & Support</span></li>
+      <li><span class="stat-num" data-count="24">24/7</span><span class="stat-label">Dispatch &amp; Support</span></li>
       <li><span class="stat-num">PA</span><span class="stat-label">I-95 / US-1 corridor</span></li>
       <li><span class="stat-num">DOT</span><span class="stat-label">Registered Carrier</span></li>
       <li><span class="stat-num">3PL</span><span class="stat-label">Warehouse Services</span></li>
@@ -364,6 +379,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
   </div>
 </section>
 
+<!-- ============ SERVICES ============ -->
 <section class="section services" id="services">
   <div class="wrap">
     <header class="section-head reveal">
@@ -377,11 +393,11 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
         <div class="card-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 5h13v11H1z"/><path d="M14 8h4l4 4v4h-8z"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
         </div>
-        <h3>Trucking & Freight</h3>
+        <h3>Trucking &amp; Freight</h3>
         <p>Reliable over-the-road transport for full truckload and LTL shipments, dispatched and tracked from pickup to delivery.</p>
         <ul class="card-list">
-          <li>Full Truckload (FTL) & LTL</li>
-          <li>Regional & long-haul lanes</li>
+          <li>Full Truckload (FTL) &amp; LTL</li>
+          <li>Regional &amp; long-haul lanes</li>
           <li>Real-time status updates</li>
         </ul>
       </article>
@@ -390,12 +406,12 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
         <div class="card-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-5 9 5v12"/><path d="M3 21h18"/><rect x="8" y="12" width="8" height="9"/><path d="M8 16h8"/></svg>
         </div>
-        <h3>Warehousing & Storage</h3>
+        <h3>Warehousing &amp; Storage</h3>
         <p>Secure short- and long-term storage with organized inventory handling — space that scales with your season.</p>
         <ul class="card-list">
-          <li>Short & long-term storage</li>
-          <li>Inventory receiving & handling</li>
-          <li>Pick, pack & ship support</li>
+          <li>Short &amp; long-term storage</li>
+          <li>Inventory receiving &amp; handling</li>
+          <li>Pick, pack &amp; ship support</li>
         </ul>
       </article>
 
@@ -407,7 +423,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
         <p>Inbound freight moves straight across the dock to outbound trucks — minimal storage, maximum speed, lower handling cost.</p>
         <ul class="card-list">
           <li>Dock-to-dock transfer</li>
-          <li>Sort, consolidate & reship</li>
+          <li>Sort, consolidate &amp; reship</li>
           <li>Faster delivery, less storage</li>
         </ul>
       </article>
@@ -416,10 +432,10 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
         <div class="card-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/><path d="M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
         </div>
-        <h3>Distribution & Transloading</h3>
+        <h3>Distribution &amp; Transloading</h3>
         <p>Value-added logistics — transloading between modes and managed distribution to your network across the Northeast.</p>
         <ul class="card-list">
-          <li>Transloading & consolidation</li>
+          <li>Transloading &amp; consolidation</li>
           <li>Regional distribution</li>
           <li>Flexible, scalable capacity</li>
         </ul>
@@ -428,6 +444,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
   </div>
 </section>
 
+<!-- ============ WHY US ============ -->
 <section class="section why" id="why">
   <div class="wrap why-inner">
     <div class="why-copy reveal">
@@ -447,13 +464,14 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 
     <div class="why-stats reveal" aria-label="Operations at a glance">
       <div class="why-stat"><span class="big">24/7</span><span>Dispatch availability</span></div>
-      <div class="why-stat"><span class="big">FTL+LTL</span><span>Truckload & less-than-truckload</span></div>
+      <div class="why-stat"><span class="big">FTL+LTL</span><span>Truckload &amp; less-than-truckload</span></div>
       <div class="why-stat"><span class="big">NE</span><span>Northeast coverage</span></div>
-      <div class="why-stat"><span class="big">3PL</span><span>Warehouse & cross-dock</span></div>
+      <div class="why-stat"><span class="big">3PL</span><span>Warehouse &amp; cross-dock</span></div>
     </div>
   </div>
 </section>
 
+<!-- ============ COVERAGE / LOCATION ============ -->
 <section class="section coverage" id="coverage">
   <div class="wrap">
     <header class="section-head reveal">
@@ -464,6 +482,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 
     <div class="coverage-grid reveal">
       <div class="map-card">
+        <!-- EDIT: this map points to the coordinates from your Google Maps link -->
         <iframe
           title="KMS Trans Inc location map"
           src="https://www.google.com/maps?q=40+Bellevue+Ave+Suite+3,+Penndel,+PA+19047&z=15&output=embed"
@@ -471,13 +490,13 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
       </div>
       <div class="coverage-info">
         <h3>Our Facility</h3>
-        <p class="addr">
+        <p class="addr"><!-- EDIT: street address -->
           40 Bellevue Ave, Suite 3<br>
           Penndel, PA 19047
         </p>
         <dl class="info-list">
-          <div><dt>Phone</dt><dd><a href="tel:+12678080333">(267) 843-4774</a></dd></div>
-          <div><dt>Email</dt><dd><a href="mailto:Dil@kmstrans.net">Dil@kmstrans.net</a></dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+12678080333">(267) 843-4774</a></dd></div><!-- EDIT: phone -->
+          <div><dt>Email</dt><dd><a href="mailto:Dil@kmstrans.net">Dil@kmstrans.net</a></dd></div><!-- EDIT: email -->
           <div><dt>Hours</dt><dd>Mon–Fri 7:00 AM – 6:00 PM<br>Dispatch on call 24/7</dd></div>
         </dl>
         <a class="btn btn-ghost" target="_blank" rel="noopener"
@@ -489,6 +508,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
   </div>
 </section>
 
+<!-- ============ QUOTE FORM ============ -->
 <section class="section quote" id="quote">
   <div class="wrap quote-inner">
     <div class="quote-copy reveal">
@@ -497,18 +517,15 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
       <p class="section-sub">Tell us what you're shipping or storing. We'll get back to you fast with options and pricing.</p>
       <ul class="check-list small">
         <li>No obligation, no spam</li>
-        <li>Quotes for trucking, warehousing & cross-docking</li>
-        <li>Prefer to talk? Call <a href="tel:+12678080333">(267) 843-4774</a></li>
+        <li>Quotes for trucking, warehousing &amp; cross-docking</li>
+        <li>Prefer to talk? Call <a href="tel:+12678080333">(267) 843-4774</a></li><!-- EDIT: phone -->
       </ul>
     </div>
 
     <form class="form-card reveal" data-ajax-form id="quoteForm" novalidate>
       <div class="form-status" role="status" aria-live="polite"></div>
-      
-      <input type="hidden" name="access_key" value="144f9b20-94c3-49b0-af31-9b50a11522f0">
-      <input type="hidden" name="subject" value="New Freight Quote Request - KMS Trans">
-      <input type="hidden" name="from_name" value="KMS Trans Website">
-      <input type="hidden" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <!-- honeypot anti-spam (do not remove) -->
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
       <div class="grid-2">
         <label class="field">
@@ -538,7 +555,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
           <option value="" disabled selected>Select a service…</option>
           <option>Trucking / Freight (FTL)</option>
           <option>Trucking / Freight (LTL)</option>
-          <option>Warehousing & Storage</option>
+          <option>Warehousing &amp; Storage</option>
           <option>Cross-Docking</option>
           <option>Distribution / Transloading</option>
           <option>Not sure — need advice</option>
@@ -567,6 +584,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
   </div>
 </section>
 
+<!-- ============ CONTACT ============ -->
 <section class="section contact" id="contact">
   <div class="wrap contact-inner">
     <div class="contact-copy reveal">
@@ -574,20 +592,15 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
       <h2 class="section-title">Questions? Send a message.</h2>
       <p class="section-sub">General questions, partnerships, or careers — drop us a line and we'll reply soon.</p>
       <ul class="contact-points">
-        <li><strong>Phone</strong><a href="tel:+12678080333">(267) 843-4774</a></li>
-        <li><strong>Email</strong><a href="mailto:Dil@kmstrans.net">Dil@kmstrans.net</a></li>
+        <li><strong>Phone</strong><a href="tel:+12678080333">(267) 843-4774</a></li><!-- EDIT: phone -->
+        <li><strong>Email</strong><a href="mailto:Dil@kmstrans.net">Dil@kmstrans.net</a></li><!-- EDIT: email -->
         <li><strong>Hours</strong><span>Mon–Fri 7:00 AM – 6:00 PM · 24/7 dispatch</span></li>
       </ul>
     </div>
 
     <form class="form-card reveal" data-ajax-form id="contactForm" novalidate>
       <div class="form-status" role="status" aria-live="polite"></div>
-      
-      <input type="hidden" name="access_key" value="144f9b20-94c3-49b0-af31-9b50a11522f0">
-      <input type="hidden" name="subject" value="New Contact Message - KMS Trans">
-      <input type="hidden" name="from_name" value="KMS Trans Website">
-      <input type="hidden" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
-      
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
       <label class="field">
         <span>Name *</span>
         <input type="text" name="name" required autocomplete="name" />
@@ -605,11 +618,12 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
   </div>
 </section>
 
+<!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <img class="footer-logo" src="data:image/png;base64,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" alt="KMS Trans Inc" />
-      <p>Trucking, warehousing & cross-docking based in Penndel, PA, serving the Northeast & Mid-Atlantic.</p>
+      <img class="footer-logo" src="data:image/png;base64,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" alt="KMS Trans Inc" />
+      <p>Trucking, warehousing &amp; cross-docking based in Penndel, PA, serving the Northeast &amp; Mid-Atlantic.</p>
     </div>
     <nav class="footer-nav" aria-label="Footer">
       <a href="#services">Services</a>
@@ -619,21 +633,22 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
       <a href="#contact">Contact</a>
     </nav>
     <div class="footer-contact">
-      <a href="tel:+12678080333">(267) 843-4774</a>
-      <a href="mailto:Dil@kmstrans.net">Dil@kmstrans.net</a>
-      <span class="dot-num">USDOT #2556034</span>
+      <a href="tel:+12678080333">(267) 843-4774</a><!-- EDIT: phone -->
+      <a href="mailto:Dil@kmstrans.net">Dil@kmstrans.net</a><!-- EDIT: email -->
+      <span class="dot-num">USDOT #2556034</span><!-- EDIT: verify your DOT number -->
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <span>© <span id="year"></span> KMS Trans Inc. All rights reserved.</span>
+    <span>&copy; <span id="year"></span> KMS Trans Inc. All rights reserved.</span>
     <span class="hazard-strip" aria-hidden="true"></span>
   </div>
 </footer>
 
+<!-- ============ CHAT WIDGET ============ -->
 <div class="chat" id="chat">
   <button class="chat-fab" id="chatFab" aria-label="Open chat assistant" aria-expanded="false" aria-controls="chatPanel">
     <svg class="chat-fab-open" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>
-    <svg class="chat-fab-close" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    <svg class="chat-fab-close" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
 
   <section class="chat-panel" id="chatPanel" aria-label="KMS Trans assistant" hidden>
@@ -655,16 +670,21 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
   </section>
 </div>
 
+<!-- Scripts: each handles ONE responsibility -->
+
 <script>
 /* =====================================================================
    nav.js — SINGLE RESPONSIBILITY: site navigation behavior
+   (mobile menu toggle, sticky-header shrink, close menu on link click)
    ===================================================================== */
 (function () {
   "use strict";
+
   var header = document.querySelector(".site-header");
   var toggle = document.getElementById("navToggle");
   var nav = document.getElementById("mainNav");
 
+  // Mobile menu open/close
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
       var open = nav.classList.toggle("open");
@@ -672,6 +692,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
       toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     });
 
+    // Close the menu after tapping a link (mobile)
     nav.addEventListener("click", function (e) {
       if (e.target.tagName === "A" && nav.classList.contains("open")) {
         nav.classList.remove("open");
@@ -681,6 +702,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
     });
   }
 
+  // Shrink / solidify header once the page is scrolled
   if (header) {
     var onScroll = function () {
       header.classList.toggle("shrink", window.scrollY > 20);
@@ -689,17 +711,20 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
     onScroll();
   }
 })();
-</script>
 
+</script>
 <script>
 /* =====================================================================
    reveal.js — SINGLE RESPONSIBILITY: reveal elements on scroll
+   Adds the "in" class to any .reveal element as it enters the viewport.
    ===================================================================== */
 (function () {
   "use strict";
+
   var items = document.querySelectorAll(".reveal");
   if (!items.length) return;
 
+  // No IntersectionObserver support → just show everything.
   if (!("IntersectionObserver" in window)) {
     items.forEach(function (el) { el.classList.add("in"); });
     return;
@@ -708,6 +733,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry, i) {
       if (entry.isIntersecting) {
+        // small stagger for groups revealing together
         setTimeout(function () { entry.target.classList.add("in"); }, i * 70);
         observer.unobserve(entry.target);
       }
@@ -716,14 +742,23 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 
   items.forEach(function (el) { observer.observe(el); });
 })();
-</script>
 
+</script>
 <script>
 /* =====================================================================
-   forms.js — SINGLE RESPONSIBILITY: validate + submit site forms via Web3Forms
+   forms.js — SINGLE RESPONSIBILITY: validate + submit site forms
+   Works for every <form data-ajax-form> on the page.
+
+   ─── SETUP (REQUIRED) ────────────────────────────────────────────────
+   1. Create a free account at  https://web3forms.com
+   2. Copy your Access Key from the dashboard.
+   3. Paste it below into WEB3FORMS_ACCESS_KEY.
+   Until you do, submitting shows a friendly "not configured yet" message.
    ===================================================================== */
 (function () {
   "use strict";
+
+  var WEB3FORMS_ACCESS_KEY = "144f9b20-94c3-49b0-af31-9b50a11522f0"; // <-- EDIT: your Web3Forms access key
 
   var ENDPOINT = "https://api.web3forms.com/submit";
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -749,6 +784,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
     var button = form.querySelector('button[type="submit"]');
     var buttonText = button ? button.textContent : "";
 
+    // Clear the "invalid" outline as the user types.
     form.addEventListener("input", function (e) {
       if (e.target.classList) e.target.classList.remove("invalid");
     });
@@ -756,6 +792,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
+      // Honeypot: a filled hidden field means a bot — silently stop.
       if (form.querySelector('[name="_gotcha"]') && form.querySelector('[name="_gotcha"]').value) return;
 
       if (!validate(form)) {
@@ -763,24 +800,28 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
         return;
       }
 
+      if (!WEB3FORMS_ACCESS_KEY) {
+        setStatus(status, "err", "Form delivery isn't configured yet. Add your Web3Forms access key in assets/js/forms.js — or call us directly.");
+        return;
+      }
+
       if (button) { button.disabled = true; button.textContent = "Sending…"; }
 
-      var formData = new FormData(form);
+      var data = new FormData(form);
+      data.append("access_key", WEB3FORMS_ACCESS_KEY); // Web3Forms: required in the body
 
       fetch(ENDPOINT, {
         method: "POST",
-        body: formData,
+        body: data,
         headers: { Accept: "application/json" }
       })
-        .then(function (res) {
-          return res.json();
-        })
-        .then(function (data) {
-          if (data.success) {
+        .then(function (res) { return res.json(); })
+        .then(function (json) {
+          if (json.success) {
             form.reset();
-            setStatus(status, "ok", "Thanks! Your request has been sent to accounting — we'll be in touch shortly.");
+            setStatus(status, "ok", "Thanks! Your message is on its way — we'll be in touch shortly.");
           } else {
-            setStatus(status, "err", data.message || "Something went wrong. Please try again or call us directly.");
+            setStatus(status, "err", "Something went wrong. Please try again or call us directly.");
           }
         })
         .catch(function () {
@@ -794,26 +835,55 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 
   document.querySelectorAll("form[data-ajax-form]").forEach(handle);
 })();
-</script>
 
+</script>
 <script>
 /* =====================================================================
    chatbot-knowledge.js — SINGLE RESPONSIBILITY: the assistant's knowledge
+   This file holds DATA ONLY (greetings, intents, answers). No logic here.
+   chatbot.js reads this object to decide what to reply.
+
+   To teach the bot something new: add an object to the `intents` array
+   with keyword triggers and an answer. To update contact details, edit
+   the CONTACT block below (used inside several answers).
    ===================================================================== */
 window.KMS_BOT = (function () {
   "use strict";
+
+  /* EDIT: keep these in sync with the contact details in index.html */
   var CONTACT = {
     phone: "(267) 843-4774",
     phoneLink: "tel:+12678080333",
-    email: "accounting@kmstrans.net",
+    email: "Dil@kmstrans.net",
     hours: "Mon–Fri 7:00 AM – 6:00 PM, with dispatch on call 24/7"
   };
 
   return {
     contact: CONTACT,
-    greeting: "Hi! I'm the KMS Trans assistant. 👋 I can help with our trucking, warehousing, and cross-docking services, quotes, hours, and location. What do you need?",
-    quickReplies: ["Our services", "Get a quote", "Cross-docking", "Hours & location", "Contact a human"],
-    fallback: "I'm not sure I caught that. I can help with <b>services</b>, <b>quotes</b>, <b>cross-docking</b>, <b>warehousing</b>, <b>hours</b>, or <b>contact info</b>. You can also reach our team at <a href='" + CONTACT.phoneLink + "'>" + CONTACT.phone + "</a>.",
+
+    // First message shown when the chat opens
+    greeting:
+      "Hi! I'm the KMS Trans assistant. 👋 I can help with our trucking, " +
+      "warehousing, and cross-docking services, quotes, hours, and location. " +
+      "What do you need?",
+
+    // Quick-reply buttons shown under the chat
+    quickReplies: [
+      "Our services",
+      "Get a quote",
+      "Cross-docking",
+      "Hours & location",
+      "Contact a human"
+    ],
+
+    // Reply used when nothing matches
+    fallback:
+      "I'm not sure I caught that. I can help with <b>services</b>, " +
+      "<b>quotes</b>, <b>cross-docking</b>, <b>warehousing</b>, <b>hours</b>, " +
+      "or <b>contact info</b>. You can also reach our team at " +
+      '<a href="' + CONTACT.phoneLink + '">' + CONTACT.phone + "</a>.",
+
+    // Intents are checked top-to-bottom; best keyword match wins.
     intents: [
       {
         name: "greeting",
@@ -823,32 +893,54 @@ window.KMS_BOT = (function () {
       {
         name: "services",
         keywords: ["service", "services", "what do you do", "offer", "help with", "do you do"],
-        answer: "KMS Trans is a full-service logistics partner. We handle:<br>• <b>Trucking & Freight</b> — full truckload (FTL) and LTL<br>• <b>Warehousing & Storage</b> — short & long-term<br>• <b>Cross-Docking</b> — fast dock-to-dock transfer<br>• <b>Distribution & Transloading</b><br>Want a <a href='#quote'>quote</a> for any of these?"
+        answer:
+          "KMS Trans is a full-service logistics partner. We handle:<br>" +
+          "• <b>Trucking & Freight</b> — full truckload (FTL) and LTL<br>" +
+          "• <b>Warehousing & Storage</b> — short & long-term<br>" +
+          "• <b>Cross-Docking</b> — fast dock-to-dock transfer<br>" +
+          "• <b>Distribution & Transloading</b><br>" +
+          'Want a <a href="#quote">quote</a> for any of these?'
       },
       {
         name: "trucking",
         keywords: ["truck", "trucking", "freight", "haul", "ftl", "ltl", "truckload", "shipping", "transport", "carrier", "lane"],
-        answer: "We move <b>full truckload (FTL)</b> and <b>LTL</b> freight on regional and long-haul lanes, dispatched and tracked from pickup to delivery. Tell us your origin, destination and commodity on the <a href='#quote'>quote form</a> and we'll price it out."
+        answer:
+          "We move <b>full truckload (FTL)</b> and <b>LTL</b> freight on regional and " +
+          "long-haul lanes, dispatched and tracked from pickup to delivery. " +
+          'Tell us your origin, destination and commodity on the <a href="#quote">quote form</a> and we\'ll price it out.'
       },
       {
         name: "warehouse",
         keywords: ["warehouse", "warehousing", "storage", "store", "inventory", "pallet", "pick", "pack", "3pl", "fulfillment"],
-        answer: "Our <b>warehousing</b> covers short- and long-term storage, inventory receiving and handling, plus pick/pack/ship support. Space scales with your season. Share your volume on the <a href='#quote'>quote form</a> for pricing."
+        answer:
+          "Our <b>warehousing</b> covers short- and long-term storage, inventory receiving " +
+          "and handling, plus pick/pack/ship support. Space scales with your busy season. " +
+          'Share your volume on the <a href="#quote">quote form</a> for pricing.'
       },
       {
         name: "crossdock",
         keywords: ["cross", "cross-dock", "crossdock", "cross dock", "dock", "transfer", "consolidate", "reship"],
-        answer: "<b>Cross-docking</b> moves inbound freight straight across the dock to outbound trucks — we sort, consolidate and reship with minimal storage. That means faster delivery and lower handling cost. Start one on the <a href='#quote'>quote form</a>."
+        answer:
+          "<b>Cross-docking</b> moves inbound freight straight across the dock to outbound " +
+          "trucks — we sort, consolidate and reship with minimal storage. That means " +
+          "faster delivery and lower handling cost. " +
+          'Start one on the <a href="#quote">quote form</a>.'
       },
       {
         name: "distribution",
         keywords: ["distribution", "transload", "transloading", "consolidation", "mode"],
-        answer: "We offer <b>distribution and transloading</b> — moving freight between modes and managing distribution across the Northeast with flexible, scalable capacity. Tell us more on the <a href='#quote'>quote form</a>."
+        answer:
+          "We offer <b>distribution and transloading</b> — moving freight between modes and " +
+          "managing distribution across the Northeast with flexible, scalable capacity. " +
+          'Tell us more on the <a href="#quote">quote form</a>.'
       },
       {
         name: "quote",
         keywords: ["quote", "price", "pricing", "cost", "rate", "estimate", "how much", "book", "ship something"],
-        answer: "Happy to help! Use the <a href='#quote'>Request a Quote form</a> with your service, origin, destination and shipment details — we'll respond fast with options and pricing. Prefer to talk? Call <a href='" + CONTACT.phoneLink + "'>" + CONTACT.phone + "</a>."
+        answer:
+          'Happy to help! Use the <a href="#quote">Request a Quote form</a> with your ' +
+          "service, origin, destination and shipment details — we'll respond fast with " +
+          "options and pricing. Prefer to talk? Call <a href='" + CONTACT.phoneLink + "'>" + CONTACT.phone + "</a>."
       },
       {
         name: "hours",
@@ -858,27 +950,43 @@ window.KMS_BOT = (function () {
       {
         name: "location",
         keywords: ["where", "location", "address", "located", "directions", "map", "facility", "yard", "pennsylvania", "pa", "penndel"],
-        answer: "We're based at <b>40 Bellevue Ave, Suite 3, Penndel, PA 19047</b> (Bucks County) — minutes from I-95, US-1 and the PA Turnpike, between Philadelphia and the NJ ports. See the map and address in the <a href='#coverage'>Coverage section</a>."
+        answer:
+          "We're based at <b>40 Bellevue Ave, Suite 3, Penndel, PA 19047</b> (Bucks County) — " +
+          "minutes from I-95, US-1 and the PA Turnpike, between Philadelphia and the NJ ports. " +
+          'See the map and address in the <a href="#coverage">Coverage section</a>.'
       },
       {
         name: "coverage",
         keywords: ["area", "region", "where do you ship", "coverage", "northeast", "states", "canada", "deliver to"],
-        answer: "We're anchored in Penndel, PA and run lanes throughout the <b>Northeast & Mid-Atlantic</b>. Tell us your origin and destination on the <a href='#quote'>quote form</a> and we'll confirm we can cover it."
+        answer:
+          "We're anchored in Penndel, PA and run lanes throughout the <b>Northeast & Mid-Atlantic</b>. " +
+          'Tell us your origin and destination on the <a href="#quote">quote form</a> and we\'ll confirm we can cover it.'
       },
       {
         name: "tracking",
         keywords: ["track", "tracking", "status", "where is my", "eta", "shipment status"],
-        answer: "For live shipment status, our dispatch team has you covered — call <a href='" + CONTACT.phoneLink + "'>" + CONTACT.phone + "</a> or email <a href='mailto:" + CONTACT.email + "'>" + CONTACT.email + "</a> with your reference number."
+        answer:
+          "For live shipment status, our dispatch team has you covered — call " +
+          "<a href='" + CONTACT.phoneLink + "'>" + CONTACT.phone + "</a> or email " +
+          "<a href='mailto:" + CONTACT.email + "'>" + CONTACT.email + "</a> with your reference number."
       },
       {
         name: "careers",
         keywords: ["job", "jobs", "career", "careers", "hiring", "driver", "drive for", "employment", "apply", "work for"],
-        answer: "Interested in driving or working with us? Send your details through the <a href='#contact'>contact form</a> or email <a href='mailto:" + CONTACT.email + "'>" + CONTACT.email + "</a> — we'd love to hear from you."
+        answer:
+          "Interested in driving or working with us? Send your details through the " +
+          '<a href="#contact">contact form</a> or email <a href="mailto:' + CONTACT.email + '">' +
+          CONTACT.email + "</a> — we'd love to hear from you."
       },
       {
         name: "contact",
         keywords: ["contact", "human", "call", "phone", "email", "talk to", "reach", "speak", "representative", "agent", "someone"],
-        answer: "You can reach our team directly:<br>📞 <a href='" + CONTACT.phoneLink + "'>" + CONTACT.phone + "</a><br>✉️ <a href='mailto:" + CONTACT.email + "'>" + CONTACT.email + "</a><br>Hours: " + CONTACT.hours + ". Or use the <a href='#contact'>contact form</a>."
+        answer:
+          "You can reach our team directly:<br>" +
+          "📞 <a href='" + CONTACT.phoneLink + "'>" + CONTACT.phone + "</a><br>" +
+          "✉️ <a href='mailto:" + CONTACT.email + "'>" + CONTACT.email + "</a><br>" +
+          "Hours: " + CONTACT.hours + ". " +
+          'Or use the <a href="#contact">contact form</a>.'
       },
       {
         name: "thanks",
@@ -893,16 +1001,19 @@ window.KMS_BOT = (function () {
     ]
   };
 })();
-</script>
 
+</script>
 <script>
 /* =====================================================================
    chatbot.js — SINGLE RESPONSIBILITY: run the chat widget
+   (open/close, render messages, match user text to a known intent).
+   The answers live in chatbot-knowledge.js (window.KMS_BOT).
    ===================================================================== */
 (function () {
   "use strict";
+
   var KB = window.KMS_BOT;
-  if (!KB) return;
+  if (!KB) return; // knowledge file failed to load
 
   var chat = document.getElementById("chat");
   var fab = document.getElementById("chatFab");
@@ -911,12 +1022,14 @@ window.KMS_BOT = (function () {
   var quick = document.getElementById("chatQuick");
   var form = document.getElementById("chatForm");
   var input = document.getElementById("chatText");
+
   var started = false;
 
+  // ---- rendering -------------------------------------------------------
   function addMessage(text, who) {
     var el = document.createElement("div");
     el.className = "msg " + who;
-    el.innerHTML = text;
+    el.innerHTML = text; // answers are author-controlled (from knowledge file)
     log.appendChild(el);
     log.scrollTop = log.scrollHeight;
     return el;
@@ -943,6 +1056,7 @@ window.KMS_BOT = (function () {
     });
   }
 
+  // ---- intent matching -------------------------------------------------
   function findAnswer(raw) {
     var text = raw.toLowerCase();
     var best = null;
@@ -952,14 +1066,17 @@ window.KMS_BOT = (function () {
       var score = 0;
       intent.keywords.forEach(function (kw) {
         if (text.indexOf(kw) !== -1) {
+          // longer keyword phrases are stronger signals
           score += kw.indexOf(" ") !== -1 ? 3 : 1;
         }
       });
       if (score > bestScore) { bestScore = score; best = intent; }
     });
+
     return best ? best.answer : KB.fallback;
   }
 
+  // ---- conversation flow ----------------------------------------------
   function botReply(text) {
     var typing = showTyping();
     var delay = 500 + Math.min(text.length * 6, 900);
@@ -983,6 +1100,7 @@ window.KMS_BOT = (function () {
     renderQuickReplies();
   }
 
+  // ---- open / close ----------------------------------------------------
   function toggleChat() {
     var open = chat.classList.toggle("open");
     panel.hidden = !open;
@@ -1005,6 +1123,7 @@ window.KMS_BOT = (function () {
     input.value = "";
   });
 })();
+
 </script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
